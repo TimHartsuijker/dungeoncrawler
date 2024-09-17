@@ -52,6 +52,18 @@ class Weapons:
         Self.Description = description
         Self.Damage = damage
 
+# rooms (x, y, monsters, items)
+class rooms:
+    X = None
+    Y = None
+    Monsters = None
+    Items = None
+
+    def __init__(Self, x, y, monsters, items):
+        Self.X = x
+        Self.y = y
+        Self.Monsters = monsters
+        Self.Items = items
         
 class Armour:
     Name = None
