@@ -9,6 +9,7 @@ class Monster:
         self.Damage = damage
 
     
-Monser1 = Monster("Demon dog", 3, 5)
+Monster1 = Monster("Demon dog", 3, 5)
+Monster1Name = Monster1.Name
 
-print(Monser1.Name)
+print(Monster1Name)
