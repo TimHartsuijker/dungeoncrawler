@@ -8,7 +8,6 @@ class Monster:
         self.HP = hp
         self.Damage = damage
 
-
 class Item:
     Name = None
     Rarity = None
@@ -24,23 +23,20 @@ class Item:
         self.Modifier = modifier
 
 class Player:
-    X = None
-    Y = None
+    Room = None
     HP = None
     Weapon = None
     Item = None
     Armour = None
 
-    def __init__(Self, x, y, hp, weapon, item, armour):
-        Self.X = x
-        Self.Y = y
+    def __init__(Self, room, hp, weapon, item, armour):
+        Self.Room = room
         Self.HP = hp
         Self.Weapon = weapon
         Self.Item = item
         Self.Armour = armour
 
-# weapons (rarity, name, description, damage)
-class Weapons:
+class Weapon:
     Rarity = None
     Name = None
     Description = None
@@ -52,8 +48,7 @@ class Weapons:
         Self.Description = description
         Self.Damage = damage
 
-# rooms (x, y, monsters, items)
-class rooms:
+class Room:
     X = None
     Y = None
     Monsters = None
@@ -72,6 +67,8 @@ class Armour:
     def __init__(self, name, modifier):
         self.Name = name
         self.Modifier = modifier
+
+
 Monster1 = Monster("Demon dog", 3, 5)
 Monster1Name = Monster1.Name
 
@@ -81,4 +78,17 @@ Item1Name = Item1.Name
 Armour1 = Armour("Armour of Agathys", 7)
 Armour1Name = Armour1.Name
 
-print(Monster1Name, Item1Name, Armour1Name)    
+Weapon1 = Weapon("common", "greatsword", "sword does bonk", 5)
+Weapon1Name = Weapon1.Name
+
+Room1 = Room(0, 0, Monster1, Item1)
+Room1X = Room1.X
+
+# players (room, hp, weapon, item, armour,) | Class made
+Player1 = Player(Room1, 10, Weapon1, Item1, Armour1)
+Player1Room = Player1.Room.X
+Player1HP = Player1.HP
+Player1Weapon = Player1.Weapon.Name
+Player1Item = Player1.Item.Name
+Player1Armour = Player1.Armour.Name
+print(Player1Room, Player1HP, Player1Weapon, Player1Item, Player1Armour)
