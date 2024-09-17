@@ -22,6 +22,36 @@ class Item:
         self.Description = description
         self.Effect = effect
         self.Modifier = modifier
+
+class Player:
+    X = None
+    Y = None
+    HP = None
+    Weapon = None
+    Item = None
+    Armour = None
+
+    def __init__(Self, x, y, hp, weapon, item, armour):
+        Self.X = x
+        Self.Y = y
+        Self.HP = hp
+        Self.Weapon = weapon
+        Self.Item = item
+        Self.Armour = armour
+
+# weapons (rarity, name, description, damage)
+class Weapons:
+    Rarity = None
+    Name = None
+    Description = None
+    Damage = None
+
+    def __init__(Self, rarity, name, description, damage):
+        Self.Rarity = rarity
+        Self.Name = name
+        Self.Description = description
+        Self.Damage = damage
+
         
 class Armour:
     Name = None
