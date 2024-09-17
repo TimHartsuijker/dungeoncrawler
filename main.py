@@ -8,11 +8,6 @@ class Monster:
         self.HP = hp
         self.Damage = damage
 
-    
-Monster1 = Monster("Demon dog", 3, 5)
-Monster1Name = Monster1.Name
-
-print(Monster1Name)
 
 class Item:
     Name = None
@@ -27,3 +22,10 @@ class Item:
         self.Description = description
         self.Effect = effect
         self.Modifier = modifier
+
+Monster1 = Monster("Demon dog", 3, 5)
+Monster1Name = Monster1.Name
+
+Item1 = Item("Shadow blade", "Uncommon", "Using this ring you can summon the Shadow blade", "Summon sword", 5)
+Item1Name = Item1.Name
+print(Monster1Name, Item1Name)    
