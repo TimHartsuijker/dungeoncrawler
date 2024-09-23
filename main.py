@@ -8,6 +8,10 @@ class Monster:
         self.HP = hp
         self.Damage = damage
 
+# Item effects that are currently implemented:
+
+# item effects that have been tested:
+
 class Item:
     Name = None
     Rarity = None
@@ -21,20 +25,6 @@ class Item:
         self.Description = description
         self.Effect = effect
         self.Modifier = modifier
-
-class Player:
-    Room = None
-    HP = None
-    Weapon = None
-    Item = None
-    Armour = None
-
-    def __init__(Self, room, hp, weapon, item, armour):
-        Self.Room = room
-        Self.HP = hp
-        Self.Weapon = weapon
-        Self.Item = item
-        Self.Armour = armour
 
 class Weapon:
     Rarity = None
@@ -68,11 +58,24 @@ class Armour:
         self.Name = name
         self.Modifier = modifier
 
+class Player:
+    Room = None 
+    HP = None
+    Weapon = None
+    Item = None
+    Armour = None
+
+    def __init__(Self, room, hp, weapon, item, armour):
+        Self.Room = room
+        Self.HP = hp
+        Self.Weapon = weapon
+        Self.Item = item
+        Self.Armour = armour
 
 Monster1 = Monster("Demon dog", 3, 5)
 Monster1Name = Monster1.Name
 
-Item1 = Item("Shadow blade", "Uncommon", "Using this ring you can summon the Shadow blade", "Summon sword", 5)
+Item1 = Item("Shadow blade", "Uncommon", "Using this ring you can summon the Shadow blade", "SummonSword", 5)
 Item1Name = Item1.Name
 
 Armour1 = Armour("Armour of Agathys", 7)
@@ -84,7 +87,6 @@ Weapon1Name = Weapon1.Name
 Room1 = Room(0, 0, Monster1, Item1)
 Room1X = Room1.X
 
-# players (room, hp, weapon, item, armour,) | Class made
 Player1 = Player(Room1, 10, Weapon1, Item1, Armour1)
 Player1Room = Player1.Room.X
 Player1HP = Player1.HP
